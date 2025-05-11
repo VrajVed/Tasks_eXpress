@@ -16,8 +16,38 @@
             <img src="images/rain.png" class="weather-icon">
             <h1 class="temp">22°c</h1>
             <h2 class="city">New York</h2>
+            <div class="details">
+                <div class="col">
+                    <img src="images/humidity.png" alt="">
+                    <div>
+                        <p class="humidity">50%</p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="images/wind.png" alt="">
+                    <div>
+                        <p class="wind">15 km/h</p>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <script>
+        const API_KEY = "b53f72c52ab24d4e1b6d260b908bb606";
+        const API_URL = "https://api.openweathermap.org/data/3.0/weather?units=metric&q=bangalore"
+    
+        async function CheckWeather() {
+            const response = await fetch(API_URL + `&appid=${API_KEY}`);
+            var data = await response.json();
+
+            console.log(data);
+        }   
+        
+        CheckWeather();
+    </script>
     
 </body>
 </html>
