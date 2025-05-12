@@ -40,8 +40,8 @@
         const API_URL = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=bangalore"
         
 
-        const searchBox = document.querySelector(".search input");
-        const searchBtn = document.querySelector(".search button");
+        const searchBox = document.querySelector(".searchbar input");
+        const searchBtn = document.querySelector(".searchbar button");
         
         async function CheckWeather() {
             const response = await fetch(API_URL + `&appid=${API_KEY}`);
