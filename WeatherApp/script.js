@@ -1,11 +1,11 @@
 const API_KEY = "b53f72c52ab24d4e1b6d260b908bb606";
-const API_URL = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=bangalore"
+const API_URL = "https://api.openweathermap.org/data/2.5/weather?units=metric&q="
 const weathericon = document.querySelector(".weather-icon");
 const searchBox = document.querySelector(".searchbar input");
 const searchBtn = document.querySelector(".searchbar button");
 
 async function CheckWeather(city) {
-    const response = await fetch(`${API_URL}${city}&appid=${API_KEY}`);
+    const response = await fetch(API_URL + city + `&appid=${API_KEY}`);
     var data = await response.json();
 
     console.log(data);
